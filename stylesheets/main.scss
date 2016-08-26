@@ -1,0 +1,196 @@
+@charset 'utf-8';
+@import 'particles/colors';
+@import 'particles/mixins';
+@import 'particles/typography';
+
+$length: 12px;
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+$border-style: $grey 2px solid;
+
+body {
+  @include primary-link-style();
+  font-family: $body-font;
+  color: $purple;
+  font-size: 14px;
+  background-color: $grey-lightest;
+}
+
+h1 {
+  margin: 0 0 $length;
+  font-family: $header-primary;
+  font-size: 2.8em;
+  color: $grey-light;
+}
+h2 {
+  margin: 0 0 $length;
+  font-family: $header-primary;
+  font-size: 2.1em;
+  text-align: center;
+}
+h3 {
+  margin: 0 0 ($length * 2);
+  font-size: 1.8em;
+  font-family: $header-secondary;
+  text-align: center;
+  color: $black;
+}
+h4 {
+  margin: 0 0 ($length * 2);
+  font-family: $body-font;
+  font-size: 1.2em;
+  color: $purple-lighter;
+  text-align: center;
+}
+h5 {
+  margin: 0 0 ($length * 2);
+  font-family: $header-primary;
+  font-size: 1.4em;
+  color: $grey-dark;
+  text-align: center;
+}
+#kana {
+  font-size: 8em;
+  color: $grey;
+}
+
+.main p {
+  font-size: 16px;
+  text-indent: 2em;
+  color: $black;
+}
+
+.container {
+  padding: ($length * 2) 0;
+}
+
+.main {
+  padding: ($length * 2) 0;
+}
+
+.wrapper {
+  margin: 0 ($length * 4);
+}
+
+.header-logo {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.header-logo-style {
+  font-weight: 600;
+}
+
+.nav-primary {
+  font-family: $body-font;
+  font-size: 1.3em;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  li {
+    display: block;
+    float: left;
+    padding: 0 0 0 ($length * 2);
+    text-transform: capitalize;
+  }
+}
+
+.header {
+  @include nav-link-style();
+  @include background-gradient();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $length ($length * 2);
+  font-family: $header-primary;
+}
+.subheader {
+  display: flex;
+  padding: $length 0 $length;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include background-gradient;
+}
+
+.nav-secondary {
+  margin: 0;
+  padding: $length 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $purple-lightest;
+  color: $black;
+  font-family: $header-primary;
+  font-size: 1.2em;
+  border-bottom: lighten($purple, 45%) 1px solid;
+}
+.nav-secondary ul {
+  padding: 0 0 0 ($length * 2);
+  li {
+    @include primary-link-style();
+  }
+}
+
+.breadcrumb {
+  @include secondary-link-style();
+  margin: 0;
+  padding: ($length / 2) 0 ($length / 2) ($length * 4);
+  background-color: lighten($purple-lightest, 3%);
+  border-bottom: lighten($purple, 50%) 1px solid;
+  font-size: 0.9em;
+  font-family: $header-primary;
+}
+
+.gap-small {
+  height: ($length * 2);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+
+.col {
+  padding: ($length * 2);
+}
+.col-well-left {
+  @include border-radius(8px 0 0 8px);
+  background-color: $grey-light;
+  border-top: $border-style;
+  border-left: $border-style;
+  border-bottom: $border-style;
+}
+.col-well-middle {
+  background-color: $grey-light;
+  border: $border-style;
+}
+.col-well-right {
+  @include border-radius(0 8px 8px 0);
+  background-color: $grey-light;
+  border-top: $border-style;
+  border-right: $border-style;
+  border-bottom: $border-style;
+}
+.col-well-full {
+  @include border-radius(8px);
+  background-color: $grey-light;
+  border: $border-style;
+}
+
+.pre-footer {
+  @include secondary-link-style();
+  margin: 0 0 ($length * 2);
+  text-align: center;
+  text-transform: capitalize;;
+  font-size: 16px;
+}
+footer {
+  padding: ($length * 2);
+  font-family: $header-primary;
+  color: $grey;
+  background-color: $black-darker;
+}

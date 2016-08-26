@@ -1,0 +1,44 @@
+@mixin background-gradient {
+  background: #52438b;
+  background: -moz-linear-gradient(left, #52438b 0%, #4b629b 100%);
+  background: -webkit-linear-gradient(left, #52438b 0%, #4b629b 100%);
+  background: linear-gradient(to right, #52438b 0%, #4b629b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52438b', endColorstr='#4b629b',GradientType=1 );
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin primary-link-style {
+  #{$a-tags} {
+    color: $purple;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $purple-light;
+  }
+}
+
+@mixin secondary-link-style {
+  #{$a-tags} {
+    color: $purple-light;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $purple-lighter;
+  }
+}
+
+@mixin nav-link-style {
+  #{$a-tags} {
+    color: $grey;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $white;
+  }
+}
