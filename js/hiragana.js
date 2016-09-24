@@ -9,7 +9,7 @@ $(document).ready(function() {
     kanaNum = num;
     return num;
   };
-  var correct = function () {
+  var correct = function() {
     numCorrect++;
     numTotal++;
     $("#statsCorrect").text(numCorrect);
