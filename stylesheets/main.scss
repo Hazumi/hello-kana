@@ -14,7 +14,6 @@ body {
   color: $purple;
   font-size: 14px;
   background-color: $white;
-  // background-color: $grey-light;
 }
 
 h1 {
@@ -44,13 +43,20 @@ h4 {
   text-align: center;
 }
 h5 {
-
   margin: 0 0 ($length * 2);
   font-family: $header-primary;
   font-size: 1.4em;
   color: $grey-dark;
   text-align: center;
 }
+h6 {
+  margin: 0 0 ($length * 1);
+  // font-family: $header-secondary;
+  font-size: 1.1em;
+  color: #000;
+  text-align: center;
+}
+
 #kana {
   font-size: 8em;
   color: $grey;
@@ -60,6 +66,10 @@ h5 {
   font-size: 16px;
   text-indent: 2em;
   color: $black;
+}
+
+.app-container p {
+  text-indent: 0;
 }
 
 .container {
@@ -191,6 +201,61 @@ hr {
     vertical-align: top;
 }
 
+.app-container {
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  border: #eee 2px solid;
+  // border-radius: 5px;
+}
+
+.app-progress {
+  margin: 0 auto;
+  width: 33.3%;
+  padding: $length;
+  // background-color: #fcfcfc;
+}
+
+.app-main {
+  margin: 0 auto;
+  text-align: center;
+  padding: $length;
+  // background-color: #fcfcfc;
+  width: 33.3%;
+}
+
+.app-stats {
+  margin: 0 auto;
+  text-align: center;
+  padding: $length;
+  // background-color: #fcfcfc;
+  width: 33.3%;
+}
+
+#input-box {
+}
+
+#display-box {
+  // background-color: #fff;
+  margin: 10px auto;
+  font-size: 8em;
+  text-align: center;
+}
+
+#results-box {
+  background-color: #f8f8f8;
+  padding: $length / 2;
+}
+
+#statsKanaPoints, #statsCorrect, #statsIncorrect, #statsTotal {
+  font-weight: bold;
+}
+
+.buttons {
+  text-align: center;
+}
+
 .pre-footer {
   @include secondary-link-style();
   margin: 0 0 ($length * 2);
@@ -198,6 +263,7 @@ hr {
   text-transform: capitalize;;
   font-size: 16px;
 }
+
 footer {
   padding: ($length * 2);
   font-family: $header-primary;

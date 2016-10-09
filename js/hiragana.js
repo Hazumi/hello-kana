@@ -1,28 +1,190 @@
 $(document).ready(function() {
-  var newKana = function() {
-    var kana = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ",
-    "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね",
-    "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ",
-    "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"];
-    var num = Math.floor(Math.random() * 46);
-    $(".kanabox").append(kana[num]);
-    kanaNum = num;
-    return num;
+
+  var kana = ["あ", "い", "う", "え", "お"];
+  var hiraganaK = ["か", "き", "く", "け", "こ"];
+  var hiraganaS = ["さ", "し", "す", "せ", "そ"];
+  var hiraganaT = ["た", "ち", "つ", "て", "と"];
+  var hiraganaN = ["な", "に", "ぬ", "ね", "の"];
+  var hiraganaH = ["は", "ひ", "ふ", "へ", "ほ"];
+  var hiraganaM = ["ま", "み", "む", "め", "も"];
+  var hiraganaY = ["や", "ゆ", "よ"];
+  var hiraganaR = ["ら", "り", "る", "れ", "ろ"];
+  var hiraganaWN = ["わ", "を", "ん"];
+
+  var kanaNum = 0;
+  var kanaLast;
+
+  var kanaPoints = 0;
+  var numCorrect = 0;
+  var numIncorrect = 0;
+  var numTotal = 0;
+
+  var $displayBox = $('#display-box');
+  var $statsKanaPoints = $('#statsKanaPoints');
+  var $statsCorrect = $('#statsCorrect');
+  var $statsIncorrect = $('#statsIncorrect');
+  var $statsTotal = $("#statsTotal");
+  var $results = $("#results");
+  var $inputBox = $("#input-box");
+
+  var $hiraganaK = $('#hiragana-k');
+  var $hiraganaS = $('#hiragana-s');
+  var $hiraganaT = $('#hiragana-t');
+  var $hiraganaN = $('#hiragana-n');
+  var $hiraganaH = $('#hiragana-h');
+  var $hiraganaM = $('#hiragana-m');
+  var $hiraganaY = $('#hiragana-y');
+  var $hiraganaR = $('#hiragana-r');
+  var $hiraganaWN = $('#hiragana-wn');
+
+  var unlocked = 0;
+
+  function genNum() {
+    kanaNum = Math.floor(Math.random() * kana.length);
+  }
+
+  function checkUnlocks() {
+    if (kanaPoints >= 2) $hiraganaK.removeClass('disabled');
+    if (kanaPoints >= 4) $hiraganaS.removeClass('disabled');
+    if (kanaPoints >= 6) $hiraganaT.removeClass('disabled');
+    if (kanaPoints >= 8) $hiraganaN.removeClass('disabled');
+    if (kanaPoints >= 10) $hiraganaH.removeClass('disabled');
+    if (kanaPoints >= 12) $hiraganaM.removeClass('disabled');
+    if (kanaPoints >= 14) $hiraganaY.removeClass('disabled');
+    if (kanaPoints >= 16) $hiraganaR.removeClass('disabled');
+    if (kanaPoints >= 18) $hiraganaWN.removeClass('disabled');
+  }
+
+  // new kana/game loop?
+  function newKana() {
+    while (kanaLast == kanaNum) {
+      genNum();
+    }
+    kanaLast = kanaNum;
+    $displayBox.text(kana[kanaNum]);
+    checkUnlocks();
   };
-  var correct = function() {
+
+  newKana(kana);
+
+  // unlock buttons
+  $hiraganaK.on('click', function() {
+    if (kanaPoints >= 2 && !$hiraganaK.hasClass('disabled')) {
+      kana = kana.concat(hiraganaK);
+      newKana(kana);
+      unlocked = 1;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaS.on('click', function() {
+    if (kanaPoints >= 4 && unlocked == 1 && !$hiraganaS.hasClass('disabled')) {
+      kana = kana.concat(hiraganaS);
+      newKana(kana);
+      unlocked = 2;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaT.on('click', function() {
+    if (kanaPoints >= 6 && unlocked == 2 && !$hiraganaT.hasClass('disabled')) {
+      kana = kana.concat(hiraganaT);
+      newKana(kana);
+      unlocked = 3;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaN.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 3 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 4;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+
+
+  $hiraganaH.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 4 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 5;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaM.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 5 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 6;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaY.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 6 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 7;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaR.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 7 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 8;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+  $hiraganaWN.on('click', function() {
+    if (kanaPoints >= 8 && unlocked == 8 && !$hiraganaN.hasClass('disabled')) {
+      kana = kana.concat(hiraganaN);
+      newKana(kana);
+      unlocked = 9;
+      $(this).fadeOut(300, function() {
+        $(this).remove();
+      });
+    }
+  });
+
+
+  function correct() {
+    kanaPoints++;
     numCorrect++;
     numTotal++;
-    $("#statsCorrect").text(numCorrect);
-    $("#statsTotal").text(numTotal);
-    $("#results").text("correct");
-    $("#inputBox").val("");
-    $(".kanabox").empty();
-    kanaNum = newKana();
+    $statsKanaPoints.text(kanaPoints);
+    $statsCorrect.text(numCorrect);
+    $statsTotal.text(numTotal);
+    $results.text("Correct");
+    $inputBox.val("");
+    newKana();
   };
-  var kanaNum = newKana(), numCorrect = 0, numWrong = 0, numTotal = 0;
-  $('#inputBox').keyup("keypress", function(e) {
+
+  $inputBox.keyup("keypress", function(e) {
     if (e.keyCode == 13) {
-      var userInput = $('#inputBox').val();
+      var userInput = $inputBox.val().toLowerCase();
       if (userInput === "a" && kanaNum === 0) {
         correct();
       } else if (userInput === "i" && kanaNum === 1) {
@@ -116,13 +278,17 @@ $(document).ready(function() {
       } else if (userInput === "n" && kanaNum === 45) {
         correct();
       } else {
-        numWrong++;
+        if (kanaPoints > 0) kanaPoints--;
+        numIncorrect++;
         numTotal++;
-        $("#statsWrong").text(numWrong);
-        $("#statsTotal").text(numTotal);
-        $("#results").text("wrong");
-        $("#inputBox").val("");
+        $statsKanaPoints.text(kanaPoints);
+        $statsIncorrect.text(numIncorrect);
+        $statsTotal.text(numTotal);
+        $results.html(kana[kanaNum] + "<br>Incorrect, you entered '" + userInput + "'.");
+        $inputBox.val("");
+        newKana();
       }
     }
   });
+
 });

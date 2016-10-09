@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello Kana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Titillium+Web|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/main.min.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header">
+      <a href="/" class="header-logo">hello<span class="header-logo-style">kana</span></a>
+      <nav class="nav-primary">
+        <ul>
+          <li><a href="">home</a></li>
+          <li><a href="">kana</a></li>
+          <li><a href="">vocabulary</a></li>
+          <li><a href="">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="subheader">
+      <h1>Master Kana</h1>
+      <h4>A simple web app to practice Hiragana and Katakana</h4>
+    </div>
+    <nav class="nav-secondary">
+      <ul>
+        <li><a href="#writingsystem">japanese writing system</a></li>
+        <li><a href="#additionalresources">additional resources</a></li>
+        <li><a href="#support">support</a></li>
+      </ul>
+    </nav>
+    <ol class="breadcrumb">
+      <li><a href="#">Kana</a></li>
+      <li><a href="#">Hiragana</a></li>
+      <li class="active">Progressive Practice</li>
+    </ol>
+  </header>
+
+  <div class="main">
+
+    <section class="container">
+      <h2 id="writingsystem">Japanese Writing System</h2>
+      <h5>The Language Components</h5>
+      <div class="col app-container">
+
+        <div class="app-progress">
+          <h3>Progress</h3>
+          <h6>Unlock Additional Kana</h6>
+          <div class="buttons ">
+            <button id="hiragana-k" class="btn btn-default disabled">K</button>
+            <button id="hiragana-s" class="btn btn-default disabled">S</button>
+            <button id="hiragana-t" class="btn btn-default disabled">T</button>
+            <button id="hiragana-n" class="btn btn-default disabled">N</button>
+            <button id="hiragana-h" class="btn btn-default disabled">H</button>
+            <button id="hiragana-m" class="btn btn-default disabled">M</button>
+            <button id="hiragana-y" class="btn btn-default disabled">Y</button>
+            <button id="hiragana-r" class="btn btn-default disabled">R</button>
+            <button id="hiragana-wn" class="btn btn-default disabled">W &amp N</button>
+          </div>
+        </div>
+
+        <div class="app-main">
+          <h3>Hiragana</h3>
+          <div id="display-box">あ</div>
+          <input id="input-box" type="text" name="input-box" size="4" maxlength="3">
+          <div id="results-box">
+            <span id="results">Type the kana in romaji to get started.</span>
+          </div>
+        </div>
+
+        <div class="app-stats">
+          <h3>Stats</h3>
+          <div id="results">
+            <p>Kana Points: <span id="statsKanaPoints">0</span></p>
+            <br>
+            <p>Correct: <span id="statsCorrect">0</span></p>
+            <p>Incorrect: <span id="statsIncorrect">0</span></p>
+            <p>Total: <span id="statsTotal">0</span></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+
+  <div class="pre-footer">
+    <a href="#">back to top</a>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col col-xs-12 col-md-4">
+        <h4>heading 4</h4>
+        <p>Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+      </div>
+
+      <div class="col col-xs-12 col-md-4">
+        <h4>heading 4</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+      </div>
+
+      <div class="col col-xs-12 col-md-4">
+        <h4>heading 4</h4>
+        <p>sed do eiusmod Ut enim ad ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/hiragana.js"></script>
+</body>
+</html>
