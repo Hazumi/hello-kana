@@ -44,15 +44,51 @@ $(document).ready(function() {
   }
 
   function checkUnlocks() {
-    if (kanaPoints >= 2) $hiraganaK.removeClass('disabled');
-    if (kanaPoints >= 4) $hiraganaS.removeClass('disabled');
-    if (kanaPoints >= 6) $hiraganaT.removeClass('disabled');
-    if (kanaPoints >= 8) $hiraganaN.removeClass('disabled');
-    if (kanaPoints >= 10) $hiraganaH.removeClass('disabled');
-    if (kanaPoints >= 12) $hiraganaM.removeClass('disabled');
-    if (kanaPoints >= 14) $hiraganaY.removeClass('disabled');
-    if (kanaPoints >= 16) $hiraganaR.removeClass('disabled');
-    if (kanaPoints >= 18) $hiraganaWN.removeClass('disabled');
+    if (kanaPoints >= 5) {
+      $hiraganaK.removeClass('disabled');
+    } else {
+      $hiraganaK.addClass('disabled');
+    }
+    if (kanaPoints >= 10) {
+      $hiraganaS.removeClass('disabled');
+    } else {
+      $hiraganaS.addClass('disabled');
+    }
+    if (kanaPoints >= 15) {
+      $hiraganaT.removeClass('disabled');
+    } else {
+      $hiraganaT.addClass('disabled');
+    }
+    if (kanaPoints >= 20) {
+      $hiraganaN.removeClass('disabled');
+    } else {
+      $hiraganaN.addClass('disabled');
+    }
+    if (kanaPoints >= 25) {
+      $hiraganaH.removeClass('disabled');
+    } else {
+      $hiraganaH.addClass('disabled');
+    }
+    if (kanaPoints >= 30) {
+      $hiraganaM.removeClass('disabled');
+    } else {
+      $hiraganaM.addClass('disabled');
+    }
+    if (kanaPoints >= 35) {
+      $hiraganaY.removeClass('disabled');
+    } else {
+      $hiraganaY.addClass('disabled');
+    }
+    if (kanaPoints >= 40) {
+      $hiraganaR.removeClass('disabled');
+    } else {
+      $hiraganaR.addClass('disabled');
+    }
+    if (kanaPoints >= 45) {
+      $hiraganaWN.removeClass('disabled');
+    } else {
+      $hiraganaWN.addClass('disabled');
+    }
   }
 
   // new kana/game loop?
@@ -69,10 +105,11 @@ $(document).ready(function() {
 
   // unlock buttons
   $hiraganaK.on('click', function() {
-    if (kanaPoints >= 2 && !$hiraganaK.hasClass('disabled')) {
+    if (kanaPoints >= 5 && !$hiraganaK.hasClass('disabled')) {
       kana = kana.concat(hiraganaK);
       newKana(kana);
       unlocked = 1;
+      $hiraganaS.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -80,10 +117,11 @@ $(document).ready(function() {
   });
 
   $hiraganaS.on('click', function() {
-    if (kanaPoints >= 4 && unlocked == 1 && !$hiraganaS.hasClass('disabled')) {
+    if (kanaPoints >= 10 && unlocked == 1 && !$hiraganaS.hasClass('disabled')) {
       kana = kana.concat(hiraganaS);
       newKana(kana);
       unlocked = 2;
+      $hiraganaT.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -91,10 +129,11 @@ $(document).ready(function() {
   });
 
   $hiraganaT.on('click', function() {
-    if (kanaPoints >= 6 && unlocked == 2 && !$hiraganaT.hasClass('disabled')) {
+    if (kanaPoints >= 15 && unlocked == 2 && !$hiraganaT.hasClass('disabled')) {
       kana = kana.concat(hiraganaT);
       newKana(kana);
       unlocked = 3;
+      $hiraganaN.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -102,23 +141,23 @@ $(document).ready(function() {
   });
 
   $hiraganaN.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 3 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 20 && unlocked == 3 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaN);
       newKana(kana);
       unlocked = 4;
+      $hiraganaH.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
     }
   });
 
-
-
   $hiraganaH.on('click', function() {
     if (kanaPoints >= 8 && unlocked == 4 && !$hiraganaN.hasClass('disabled')) {
-      kana = kana.concat(hiraganaN);
+      kana = kana.concat(hiraganaH);
       newKana(kana);
       unlocked = 5;
+      $hiraganaM.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -127,9 +166,10 @@ $(document).ready(function() {
 
   $hiraganaM.on('click', function() {
     if (kanaPoints >= 8 && unlocked == 5 && !$hiraganaN.hasClass('disabled')) {
-      kana = kana.concat(hiraganaN);
+      kana = kana.concat(hiraganaM);
       newKana(kana);
       unlocked = 6;
+      $hiraganaY.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -138,9 +178,10 @@ $(document).ready(function() {
 
   $hiraganaY.on('click', function() {
     if (kanaPoints >= 8 && unlocked == 6 && !$hiraganaN.hasClass('disabled')) {
-      kana = kana.concat(hiraganaN);
+      kana = kana.concat(hiraganaY);
       newKana(kana);
       unlocked = 7;
+      $hiraganaR.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -149,9 +190,10 @@ $(document).ready(function() {
 
   $hiraganaR.on('click', function() {
     if (kanaPoints >= 8 && unlocked == 7 && !$hiraganaN.hasClass('disabled')) {
-      kana = kana.concat(hiraganaN);
+      kana = kana.concat(hiraganaR);
       newKana(kana);
       unlocked = 8;
+      $hiraganaWN.removeClass('hidden')
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -160,7 +202,7 @@ $(document).ready(function() {
 
   $hiraganaWN.on('click', function() {
     if (kanaPoints >= 8 && unlocked == 8 && !$hiraganaN.hasClass('disabled')) {
-      kana = kana.concat(hiraganaN);
+      kana = kana.concat(hiraganaWN);
       newKana(kana);
       unlocked = 9;
       $(this).fadeOut(300, function() {
@@ -168,7 +210,6 @@ $(document).ready(function() {
       });
     }
   });
-
 
   function correct() {
     kanaPoints++;
