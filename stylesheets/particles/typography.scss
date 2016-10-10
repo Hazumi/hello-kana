@@ -1,3 +1,33 @@
+@mixin primary-link-style {
+  #{$a-tags} {
+    color: $purple;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $purple-light;
+  }
+}
+
+@mixin secondary-link-style {
+  #{$a-tags} {
+    color: $purple-light;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $purple-lighter;
+  }
+}
+
+@mixin nav-link-style {
+  #{$a-tags} {
+    color: $grey;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $white;
+  }
+}
+
 $header-primary: ('Varela Round', 'Arial', sans-serif);
 $header-secondary: ('Raleway', 'Arial', sans-serif);
 $body-font: ('Roboto', 'Arial', sans-serif);

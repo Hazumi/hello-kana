@@ -44,47 +44,47 @@ $(document).ready(function() {
   }
 
   function checkUnlocks() {
-    if (kanaPoints >= 5) {
+    if (kanaPoints >= 50) {
       $hiraganaK.removeClass('disabled');
     } else {
       $hiraganaK.addClass('disabled');
     }
-    if (kanaPoints >= 10) {
+    if (kanaPoints >= 50) {
       $hiraganaS.removeClass('disabled');
     } else {
       $hiraganaS.addClass('disabled');
     }
-    if (kanaPoints >= 15) {
+    if (kanaPoints >= 50) {
       $hiraganaT.removeClass('disabled');
     } else {
       $hiraganaT.addClass('disabled');
     }
-    if (kanaPoints >= 20) {
+    if (kanaPoints >= 75) {
       $hiraganaN.removeClass('disabled');
     } else {
       $hiraganaN.addClass('disabled');
     }
-    if (kanaPoints >= 25) {
+    if (kanaPoints >= 75) {
       $hiraganaH.removeClass('disabled');
     } else {
       $hiraganaH.addClass('disabled');
     }
-    if (kanaPoints >= 30) {
+    if (kanaPoints >= 75) {
       $hiraganaM.removeClass('disabled');
     } else {
       $hiraganaM.addClass('disabled');
     }
-    if (kanaPoints >= 35) {
+    if (kanaPoints >= 100) {
       $hiraganaY.removeClass('disabled');
     } else {
       $hiraganaY.addClass('disabled');
     }
-    if (kanaPoints >= 40) {
+    if (kanaPoints >= 100) {
       $hiraganaR.removeClass('disabled');
     } else {
       $hiraganaR.addClass('disabled');
     }
-    if (kanaPoints >= 45) {
+    if (kanaPoints >= 100) {
       $hiraganaWN.removeClass('disabled');
     } else {
       $hiraganaWN.addClass('disabled');
@@ -105,11 +105,14 @@ $(document).ready(function() {
 
   // unlock buttons
   $hiraganaK.on('click', function() {
-    if (kanaPoints >= 5 && !$hiraganaK.hasClass('disabled')) {
+    if (kanaPoints >= 50 && !$hiraganaK.hasClass('disabled')) {
       kana = kana.concat(hiraganaK);
       newKana(kana);
       unlocked = 1;
+      kanaPoints -= 50;
       $hiraganaS.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -117,11 +120,14 @@ $(document).ready(function() {
   });
 
   $hiraganaS.on('click', function() {
-    if (kanaPoints >= 10 && unlocked == 1 && !$hiraganaS.hasClass('disabled')) {
+    if (kanaPoints >= 50 && unlocked == 1 && !$hiraganaS.hasClass('disabled')) {
       kana = kana.concat(hiraganaS);
       newKana(kana);
       unlocked = 2;
+      kanaPoints -= 50;
       $hiraganaT.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -129,11 +135,14 @@ $(document).ready(function() {
   });
 
   $hiraganaT.on('click', function() {
-    if (kanaPoints >= 15 && unlocked == 2 && !$hiraganaT.hasClass('disabled')) {
+    if (kanaPoints >= 50 && unlocked == 2 && !$hiraganaT.hasClass('disabled')) {
       kana = kana.concat(hiraganaT);
       newKana(kana);
       unlocked = 3;
+      kanaPoints -= 50;
       $hiraganaN.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -141,11 +150,14 @@ $(document).ready(function() {
   });
 
   $hiraganaN.on('click', function() {
-    if (kanaPoints >= 20 && unlocked == 3 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 75 && unlocked == 3 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaN);
       newKana(kana);
       unlocked = 4;
+      kanaPoints -= 75;
       $hiraganaH.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -153,11 +165,14 @@ $(document).ready(function() {
   });
 
   $hiraganaH.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 4 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 75 && unlocked == 4 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaH);
       newKana(kana);
       unlocked = 5;
+      kanaPoints -= 75;
       $hiraganaM.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -165,11 +180,14 @@ $(document).ready(function() {
   });
 
   $hiraganaM.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 5 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 75 && unlocked == 5 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaM);
       newKana(kana);
       unlocked = 6;
+      kanaPoints -= 75;
       $hiraganaY.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -177,11 +195,14 @@ $(document).ready(function() {
   });
 
   $hiraganaY.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 6 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 100 && unlocked == 6 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaY);
       newKana(kana);
       unlocked = 7;
+      kanaPoints -= 100;
       $hiraganaR.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -189,11 +210,14 @@ $(document).ready(function() {
   });
 
   $hiraganaR.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 7 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 100 && unlocked == 7 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaR);
       newKana(kana);
       unlocked = 8;
+      kanaPoints -= 100;
       $hiraganaWN.removeClass('hidden')
+      checkUnlocks();
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -201,10 +225,12 @@ $(document).ready(function() {
   });
 
   $hiraganaWN.on('click', function() {
-    if (kanaPoints >= 8 && unlocked == 8 && !$hiraganaN.hasClass('disabled')) {
+    if (kanaPoints >= 100 && unlocked == 8 && !$hiraganaN.hasClass('disabled')) {
       kana = kana.concat(hiraganaWN);
       newKana(kana);
       unlocked = 9;
+      kanaPoints -= 100;
+      $statsKanaPoints.text(kanaPoints);
       $(this).fadeOut(300, function() {
         $(this).remove();
       });
@@ -213,6 +239,8 @@ $(document).ready(function() {
 
   function correct() {
     kanaPoints++;
+    // hacks lol
+    // kanaPoints += 25;
     numCorrect++;
     numTotal++;
     $statsKanaPoints.text(kanaPoints);
@@ -329,6 +357,8 @@ $(document).ready(function() {
         $inputBox.val("");
         newKana();
       }
+      checkUnlocks();
+
     }
   });
 
