@@ -164,9 +164,9 @@ ul {
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
 .col {
@@ -205,14 +205,26 @@ hr {
 // }
 
 .content-wrapper {
-  @include border-radius(10px);
+  @include border-radius(4px);
   margin: ($length * 2) auto ($length * 2);
-  display: flex;
-  padding: $length;
-  justify-content: space-between;
-  background-color: #fdfdfd;
+  // display: flex;
+  padding: $length * 2;
+  // justify-content: space-between;
+  font-size: 1.1em;
+  background-color: #fcfcfc;
+  // background-color: lighten($purple-lightest, 4%);
   border: #eee 2px solid;
+  // border-top: lighten($purple, 50%) 2px solid;
+  // border: lighten($purple, 50%) 3px solid;
+  // border-left: lighten($purple, 50%) 2px solid;
+  // border-right: lighten($purple, 50%) 2px solid;
+
 }
+
+// .p-box {
+//   background-color: #fff;
+//   padding: $length / 2;
+// }
 
 .app-progress {
   margin: 0 auto;
@@ -237,12 +249,11 @@ hr {
 #display-box {
   // background-color: #fff;
   margin: 10px auto;
-  font-size: 8em;
+  font-size: 7em;
   text-align: center;
 }
 
 #results-box {
-  // background-color: #f8f8f8;
   padding: $length / 2;
 }
 
