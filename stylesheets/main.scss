@@ -30,7 +30,7 @@ h2 {
 }
 h3 {
   margin: 0 0 ($length * 2);
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: $header-secondary;
   text-align: center;
   color: $black;
@@ -171,6 +171,7 @@ hr {
 
 .col {
   padding: ($length * 2);
+  font-size: 1.2em;
 }
 .col-well-left {
   @include border-radius(8px 0 0 8px);
@@ -210,9 +211,8 @@ hr {
   // display: flex;
   padding: $length * 2;
   // justify-content: space-between;
-  font-size: 1.1em;
+  font-size: 1.2em;
   background-color: #fcfcfc;
-  // background-color: lighten($purple-lightest, 4%);
   border: #eee 2px solid;
   // border-top: lighten($purple, 50%) 2px solid;
   // border: lighten($purple, 50%) 3px solid;
@@ -225,6 +225,8 @@ hr {
 //   background-color: #fff;
 //   padding: $length / 2;
 // }
+
+
 
 .app-progress {
   margin: 0 auto;
@@ -253,6 +255,10 @@ hr {
   text-align: center;
 }
 
+#results p {
+  text-indent: 0;
+}
+
 #results-box {
   padding: $length / 2;
 }
@@ -276,6 +282,7 @@ hr {
 footer {
   padding: ($length * 2);
   font-family: $header-primary;
+  font-size: 0.9em;
   color: $grey;
   background-color: $black-darker;
 }
