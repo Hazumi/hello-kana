@@ -96,7 +96,8 @@ $(document).ready(function() {
     }
   }
 
-  // new kana/game loop?
+  // new kana/game loop
+  // thing
   function newKana() {
     while (kanaLast == kanaNum) {
       genNum();
