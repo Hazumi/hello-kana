@@ -14,7 +14,7 @@ $(document).ready(function() {
   var kanaNum = 0;
   var kanaLast;
 
-  var kanaPoints = 0;
+  var kanaPoints = 500;
   var numCorrect = 0;
   var numIncorrect = 0;
   var numTotal = 0;
@@ -38,6 +38,11 @@ $(document).ready(function() {
   var $hiraganaWN = $('#hiragana-wn');
 
   var unlocked = 0;
+
+  $statsKanaPoints.text(kanaPoints);
+  $statsCorrect.text(numCorrect);
+  $statsTotal.text(numTotal);
+  $results.text("Correct");
 
   function genNum() {
     kanaNum = Math.floor(Math.random() * kana.length);

@@ -12,7 +12,7 @@ body {
   @include primary-link-style();
   font-family: $body-font;
   color: $purple;
-  font-size: 14px;
+  font-size: 13px;
   background-color: $white;
 }
 
@@ -57,7 +57,7 @@ h6 {
   text-align: center;
 }
 
-#kana {
+.kana {
   font-size: 8em;
   color: $grey;
 }
