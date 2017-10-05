@@ -11,26 +11,28 @@ $border-style: $grey 2px solid;
 body {
   @include primary-link-style();
   font-family: $body-font;
-  color: $purple;
-  font-size: 13px;
+  color: $black;
+  font-size: 16px;
   background-color: $white;
 }
 
 h1 {
-  margin: 0 0 $length;
+  margin: $length 0;
   font-family: $header-primary;
-  font-size: 3em;
+  font-size: 2em;
   color: $grey-light;
+  text-align: center;
 }
 h2 {
   margin: 0 0 $length;
   font-family: $header-primary;
-  font-size: 2.1em;
+  font-size: 1.5em;
+  color: $purple;
   text-align: center;
 }
 h3 {
-  margin: 0 0 ($length * 2);
-  font-size: 1.4em;
+  margin: 0 0 $length;
+  font-size: 1.17em;
   font-family: $header-secondary;
   text-align: center;
   color: $black;
@@ -38,244 +40,221 @@ h3 {
 h4 {
   margin: 0 0 ($length * 2);
   font-family: $body-font;
-  font-size: 1.2em;
+  font-size: 1em;
   color: $purple-lighter;
   text-align: center;
 }
 h5 {
   margin: 0 0 ($length * 2);
   font-family: $header-primary;
-  font-size: 1.4em;
+  font-size: 1em;
   color: $grey-dark;
   text-align: center;
 }
-h6 {
-  margin: 0 0 ($length * 1);
-  // font-family: $header-secondary;
-  font-size: 1.0em;
-  color: #000;
-  text-align: center;
+
+p {
+  text-indent: 1.5em;
 }
+
 
 .kana {
-  font-size: 8em;
-  color: $grey;
-}
-
-section {
-  // font-size: 16px;
-}
-
-.main p {
-  text-indent: 2em;
-  color: $black;
-}
-
-.app-container p {
+  @include border-radius(50%);
+  @include background-gradient();
+  margin: 0 auto ($length * 2);
+  font-size: 400%;
+  color: $white;
   text-indent: 0;
+  text-align: center;
+  background-color: $purple;
+  width: 115px;
+  height: 115px;
+  line-height: 115px;
+  box-shadow: 0px 0px 12px $purple-light;
 }
 
-.container {
-  padding: ($length * 2) 0;
+.practice-kana {
+  font-size: 7em;
+  text-indent: 0;
+  text-align: center;
+  color: $purple;
 }
 
-.main {
-  padding: ($length * 1) 0;
-}
-
-.wrapper {
-  margin: 0 ($length * 4);
-}
-
-.header-logo {
-  font-size: 3em;
-  font-weight: 400;
-}
-
-.header-logo-style {
-  font-weight: 600;
-}
-
-.nav-primary {
-  font-family: $body-font;
-  font-size: 1.3em;
+.logo {
+  font-size: 2em;
+  font-weight: 200;
+  span {
+    font-weight: 600;
+  }
 }
 
 ul {
   margin: 0;
   list-style-type: none;
   li {
-    display: block;
-    float: left;
-    padding: 0 0 0 ($length * 2);
+    display: inline-block;
     text-transform: capitalize;
   }
 }
 
-.header {
+header {
   @include nav-link-style();
   @include background-gradient();
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $length ($length * 2);
+  padding: $length * 1.5;
   font-family: $header-primary;
 }
-.subheader {
+
+.header-top {
   display: flex;
-  padding: $length 0 $length;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  @include background-gradient;
+  justify-content: space-between;
+}
+
+nav {
+  font-family: $body-font;
+  font-size: 1em;
+  float: right;
+  ul li {
+    padding: 0 0 0 ($length * 2);
+  }
 }
 
 .nav-secondary {
   margin: 0;
-  padding: $length 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 10px 0;
   background-color: $purple-lightest;
   color: $black;
   font-family: $header-primary;
-  font-size: 1.2em;
-  border-bottom: lighten($purple, 45%) 1px solid;
+  font-size: 0.9em;
+  border-bottom: lighten($purple, 45%) 2px solid;
 }
 .nav-secondary ul {
   padding: 0 0 0 ($length * 2);
   li {
-    @include primary-link-style();
+    padding: 0 ($length * 1.5) 0 0;
   }
 }
 
 .breadcrumb {
   @include secondary-link-style();
   margin: 0;
-  padding: ($length / 2) 0 ($length / 2) ($length * 4);
+  padding: ($length / 2) 0 ($length / 2) ($length * 2);
   background-color: lighten($purple-lightest, 3%);
   border-bottom: lighten($purple, 50%) 1px solid;
-  font-size: 0.9em;
-  font-family: $header-primary;
+  font-size: 0.8em;
 }
 
-.gap-small {
-  height: ($length * 2);
+section {
+  padding: ($length * 2) 0;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+.row {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  & > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.col {
-  padding: ($length * 2);
-  font-size: 1.2em;
-}
-.col-well-left {
-  @include border-radius(8px 0 0 8px);
-  background-color: $grey-light;
-  border-top: $border-style;
-  border-left: $border-style;
-  border-bottom: $border-style;
-}
-.col-well-middle {
-  background-color: $grey-light;
-  border: $border-style;
-}
-.col-well-right {
-  @include border-radius(0 8px 8px 0);
-  background-color: $grey-light;
-  border-top: $border-style;
-  border-right: $border-style;
-  border-bottom: $border-style;
-}
-.col-well-full {
-  @include border-radius(8px);
-  background-color: $grey-light;
-  border: $border-style;
-}
-// .row {
-//     display: table;
-// }
-// [class*="col-"] {
-//     float: none;
-//     display: table-cell;
-//     vertical-align: top;
-// }
-
-.content-wrapper {
-  @include border-radius(4px);
-  margin: ($length * 2) auto ($length * 2);
-  // display: flex;
-  padding: $length * 2;
-  // justify-content: space-between;
-  font-size: 1.2em;
-  background-color: #fcfcfc;
-  border: #eee 2px solid;
-  // border-top: lighten($purple, 50%) 2px solid;
-  // border: lighten($purple, 50%) 3px solid;
-  // border-left: lighten($purple, 50%) 2px solid;
-  // border-right: lighten($purple, 50%) 2px solid;
-
+.btn {
+  margin: 2px;
+  color: $purple;
+  background-color: $white;
+  border-top: 1px solid $purple-light;
+  border-left: 1px solid $purple-light;
+  border-bottom: 2px solid $purple;
+  border-right: 2px solid $purple;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: $white;
+    border: 1px solid $purple-light;
+    color: $purple;
+  }
 }
 
-// .p-box {
-//   background-color: #fff;
-//   padding: $length / 2;
-// }
-
-
-
-.app-progress {
-  margin: 0 auto;
-  width: 33.3%;
+.highlighted {
+  color: green;
 }
 
-.app-main {
-  margin: 0 auto;
-  text-align: center;
-  width: 33.3%;
-}
-
-.app-stats {
-  margin: 0 auto;
-  text-align: center;
-  width: 33.3%;
-}
-
-#input-box {
-}
-
-#display-box {
-  // background-color: #fff;
-  margin: 10px auto;
-  font-size: 7em;
-  text-align: center;
-}
-
-#results p {
-  text-indent: 0;
+#alice {
+  position: relative;
+  // top: (1 * $length);
+  width: 100%;
+  // min-width: 210px;
+  // max-width: 330px;
 }
 
 #results-box {
-  padding: $length / 2;
+  text-align: center;
 }
 
-#statsKanaPoints, #statsCorrect, #statsIncorrect, #statsTotal {
+#user-input-box {
+  border: 2px solid $purple;
+  width: 2em;
+  font-size: 2em;
+  text-align: center;
+  color: $purple;
+  &:focus {
+    outline: none;
+  }
+}
+
+// .col {
+//   padding: $length;
+// }
+//
+[class*='col-'] {
+  padding-top: $length;
+}
+
+#result, #result2 {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#result2 {
+  width: 100%;
+}
+
+.stats {
+  @include border-radius(8px);
+  background-color: lighten($purple-lightest, 3%);
+  border: lighten($purple, 45%) 2px solid;
+  // border-left: $grey 4px solid;
+  font-family: $header-primary;
+  text-align: center;
+  p {
+    text-indent: 0;
+  }
+}
+
+.stats span {
   font-weight: bold;
 }
 
-.buttons {
+#progress-box {
+  // display: flex;
+  // justify-content: space-between;
   text-align: center;
+  font-size: 1.1em;
+}
+
+#progress-box div {
+  display: inline-block;
+  // padding: 0 33% 0 0;
+  width: 30%;
 }
 
 .pre-footer {
   @include secondary-link-style();
   margin: 0 0 ($length * 2);
   text-align: center;
-  text-transform: capitalize;;
   font-size: 16px;
 }
 
@@ -285,4 +264,108 @@ footer {
   font-size: 0.9em;
   color: $grey;
   background-color: $black-darker;
+}
+
+// $mobile: 768px;
+@media screen and (max-width: 600px) {
+  header {
+    // display: flex;
+    flex-wrap: wrap;
+  }
+  .header-top {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  nav {
+    margin: 0 auto;
+    ul {
+      padding: 0;
+      li {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+  h1 {
+    margin: ($length * 2) 0 $length 0 ;
+    font-size: 1.5em;
+  }
+  .logo {
+    margin: 0 0 ($length * 2) 0;
+    width: 100%;
+  }
+
+  nav {
+    display: block;
+  }
+}
+
+
+
+
+
+/* Hang */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+.hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }

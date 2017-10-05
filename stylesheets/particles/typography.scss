@@ -20,11 +20,11 @@
 
 @mixin nav-link-style {
   #{$a-tags} {
-    color: $grey;
+    color: $white;
     text-decoration: none;
   }
   #{$a-tags-hover} {
-    color: $white;
+    color: #fff;
   }
 }
 

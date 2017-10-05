@@ -2,19 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello Kana</title>
+  <title>Hello Kana - Master Kana Today</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Titillium+Web|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheets/main.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/lib/animate.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 <body>
 
   <header>
-    <div class="header">
-      <a href="index.html" class="header-logo">hello<span class="header-logo-style">kana</span></a>
-      <nav class="nav-primary">
+    <div class="header-top">
+      <a class="logo" href="index.html">hello<span>kana</span></a>
+      <nav>
         <ul>
           <li><a href="index.html">home</a></li>
           <li><a href="hiragana.html">kana</a></li>
@@ -23,105 +24,104 @@
         </ul>
       </nav>
     </div>
-    <div class="subheader">
+
+    <div class="header-bottom">
       <h1>Master Kana</h1>
       <h4>A simple web app to practice Hiragana and Katakana</h4>
     </div>
-    <nav class="nav-secondary">
-      <ul>
-        <li><a href="#writingsystem">japanese writing system</a></li>
-        <li><a href="#additionalresources">additional resources</a></li>
-        <li><a href="#support">support</a></li>
-      </ul>
-    </nav>
-    <ol class="breadcrumb">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Hiragana</a></li>
-      <li class="active">a i u e o</li>
-    </ol>
+
+
+
+
   </header>
 
-  <div class="main">
 
-    <section class="container">
-      <h2 id="writingsystem">Japanese Writing System</h2>
-      <h5>The Language Components</h5>
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col-xs-4">
-            <h3>Hiragana</h3>
-            <h4 class="kana">あ</h4>
-            <div class="p-box">
-              <p>Hiragana is a set of written symbols that represent syllables spoken in Japanese. The word Hiragana itself means rounded because they were originally based on more intricate characters. Hiragana is typically the first syllabary learned in Japanese.</p>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <h3>Katakana</h3>
-            <h4 class="kana">ア</h4>
-            <div class="p-box">
-              <p>Katakana is identical to Hiragana in pronunciation but it most commonly used for words imported from foreign languages. The characters themselves are simpler and more square. Katakana is the next step right after Hiragana.</p>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <h3>Kanji</h3>
-            <h4 class="kana">水</h4>
-            <div class="p-box">
-              <p>Kanji are ideograms used to represent ideas such as an objects, qualitys or things. There are 1,945 basic kanji that commonly used and about 3,000 at a university level.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4">
-            <button class="btn btn-block btn-default">Learn Hiragana</button>
-          </div>
-          <div class="col-xs-4">
-            <button class="btn btn-block btn-default">Learn Katakana</button>
-          </div>
-          <div class="col-xs-4">
-            <button class="btn btn-block btn-default">Learn Kanji</button>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- <hr> -->
-
-    <section class="container">
-      <h2 id="additionalresources">Additional Resources</h2>
-      <h5>What's Next?</h5>
-      <div class="col col-xs-12">
-        <p>After obtaining a grip on the fundementals of the Japanese language the next logical step would be putting them to use. There are an overwhelming number of opinions about what should come next. I will list the most noteworthy resources below and share my opinions about each.</p>
-        <a href="https://www.amazon.com/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">GENKI I: An Integrated Course in Elementary Japanese</a>
-        <p> - A very popular choice among universities in America.</p>
-      </p>
-      </div>
-    </section>
+  <div class="nav-secondary">
+    <ul>
+      <li><a href="#writingsystem">japanese writing system</a></li>
+      <li><a href="#additionalresources">additional resources</a></li>
+      <li><a href="#support">support</a></li>
+    </ul>
   </div>
 
+  <ol class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Hiragana</a></li>
+    <li class="active">a i u e o</li>
+  </ol>
+
+  <section class="container">
+    <h2 id="writingsystem">Japanese Writing System</h2>
+    <h5>The Language Components</h5>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="hiragana.html"><p class="kana">あ</p></a>
+          <h3>Hiragana</h3>
+          <p>Hiragana is a set of written symbols that represent syllables spoken in Japanese. The word Hiragana itself means rounded because they were originally based on more intricate characters. Hiragana is typically the first syllabary set learned in Japanese.</p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <a href="katakana.html"><p class="kana">ア</p></a>
+          <h3>Katakana</h3>
+          <p>Katakana is identical to Hiragana in pronunciation but it most commonly used for words of foreign origins. The characters themselves are simpler and more square. Katakana is the next step right after Hiragana.</p>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <a href="kanji.html"><p class="kana">水</p></a>
+          <h3>Kanji</h3>
+          <p>Kanji are ideograms used to represent ideas such as an objects, qualitys or things. There are 1,945 basic kanji that commonly used and about 3,000 used at a university level.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 text-center">
+          <button class="btn btn-block btn-default hvr-hang">Practice Hiragana</button>
+        </div>
+        <div class="col-xs-12 col-sm-4 text-center">
+          <button class="btn btn-block btn-default hvr-hang">Practice Katakana</button>
+        </div>
+        <div class="col-xs-12 col-sm-4 text-center">
+          <button class="btn btn-block btn-default hvr-hang">Practice Kanji</button>
+        </div>
+      </div>
+  </section>
+
+  <section class="container">
+    <h2 id="additionalresources">Additional Resources</h2>
+    <h5>What's Next?</h5>
+    <div class="col col-xs-12">
+      <p>After obtaining a grip on the fundementals of the Japanese language the next logical step would be putting them to use. There are an overwhelming number of opinions about what should come next. I will list the most noteworthy resources below and share my opinions about each.</p>
+      <a href="https://www.amazon.com/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">GENKI I: An Integrated Course in Elementary Japanese</a>
+      <p> - A very popular choice among universities in America.</p>
+    </p>
+    </div>
+  </section>
+
   <div class="pre-footer">
-    <a href="#">back to top</a>
+    <a href="#">Back to Top</a>
   </div>
 
   <footer>
-    <div class="row">
-      <div class="col col-xs-12 col-md-4">
-        <h4>heading 4</h4>
-        <p>Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-xs-12 col-sm-4">
+          <h4>heading 4</h4>
+          <p>Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+        </div>
 
-      <div class="col col-xs-12 col-md-4">
-        <h4>heading 4</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-      </div>
+        <div class="col col-xs-12 col-sm-4">
+          <h4>heading 4</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+        </div>
 
-      <div class="col col-xs-12 col-md-4">
-        <h4>heading 4</h4>
-        <p>sed do eiusmod Ut enim ad ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+        <div class="col col-xs-12 col-sm-4">
+          <h4>heading 4</h4>
+          <p>sed do eiusmod Ut enim ad ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
+        </div>
       </div>
     </div>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="js/hiragana.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
