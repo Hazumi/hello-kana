@@ -5,25 +5,41 @@
   <title>Hello Kana - Master Kana Today</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Titillium+Web|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/lib/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 <body>
-
   <header>
-    <a class="logo" href="index.html">hello<span>kana</span></a>
-    <nav>
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="hiragana.html">kana</a></li>
-        <li><a href="vocab.html">vocabulary</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <a class="logo navbar-brand" href="index.html">hello<span>kana</span></a>
+      <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse dropdown" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="hiragana.html">Kana</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vocab.html">Vocabulary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <h1>Master Kana</h1>
-    <h4>A simple web app to practice Hiragana and Katakana</h4>
+
+    <div class="container-fluid header-bottom">
+      <h1>Master Kana</h1>
+      <h4>A simple web app to practice Hiragana and Katakana</h4>
+    </div>
   </header>
 
   <div class="nav-secondary">
@@ -34,21 +50,22 @@
     </ul>
   </div>
 
-  <ol class="breadcrumb">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#">Hiragana</a></li>
-    <li class="active">a i u e o</li>
-  </ol>
+  <!-- <nav id="breadcrum" aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav> -->
 
   <section class="container">
     <h2 id="writingsystem">Hiragana Practice</h2>
     <h5>Something hip goes here</h5>
       <div class="row">
-        <div class="col-xs-12 col-sm-3">
-          <img id="alice" class="img-responsive center-block" src="img/alice/normal.png">
+        <div id="" class="col-xs-12 col-sm col-md-3">
+          <img id="alice" src="img/alice/normal.png">
         </div>
-        <div class="col-xs-12 col-sm-6">
-
+        <div id="" class="col-xs-12 col-sm col-md-6 pb-5">
           <h3>Hiragana</h3>
           <p id="current-kana-display" class="practice-kana">あ</p>
           <div id="results-box">
@@ -57,35 +74,29 @@
             <span id="result2"></span>
           </div>
         </div>
-
-        <div class="stats col-xs-12 col-sm-3">
+        <div id="" class="col-xs-12 col-sm-12 col-md-3 stats p-2">
           <h3>Stats</h3>
           <p>Level: <span id="lvl">1</span></p>
           <p>XP: <span id="xp">0</span> / <span id="xp-to-level">15</span></p>
           <p>KanaPoints: <span id="kp">0</span></p>
           <p><a href="stats.html">View Kana</a></p>
 
-          <!-- <p>Correct: <span id="correct">0</span></p>
-          <p>Incorrect: <span id="incorrect">0</span></p>
-          <p>Total: <span id="total">0</span></p> -->
-
           <br>
 
           <h3>Unlocks</h3>
           <div id="progress-box">
-            <button id="ka" class="btn ">か き く け こ<br>50 KanaPoints</button>
-            <button id="sa" class="btn hidden">さ し す せ そ<br>50 KanaPoints</button>
-            <button id="ta" class="btn hidden">た	ち	つ	て	と<br>50 KanaPoints</button>
-            <button id="na" class="btn hidden">な	に	ぬ	ね	の<br>75 KanaPoints</button>
-            <button id="ha" class="btn hidden">は	ひ	ふ	へ	ほ<br>75 KanaPoints</button>
-            <button id="ma" class="btn hidden">ま	み	む	め	も<br>75 KanaPoints</button>
-            <button id="ya" class="btn hidden">や	ゆ	よ<br>100 KanaPoints</button>
-            <button id="ra" class="btn hidden">ら	り	る	れ	ろ<br>100 KanaPoints</button>
-            <button id="wa" class="btn hidden">わ	を ん<br>100 KanaPoints</button>
+            <button id="ka" class="btn btn-primary">か き く け こ<br>50 KanaPoints</button>
+            <button id="sa" class="btn btn-primary d-none">さ し す せ そ<br>50 KanaPoints</button>
+            <button id="ta" class="btn btn-primary d-none">た	ち	つ	て	と<br>50 KanaPoints</button>
+            <button id="na" class="btn btn-primary d-none">な	に	ぬ	ね	の<br>75 KanaPoints</button>
+            <button id="ha" class="btn btn-primary d-none">は	ひ	ふ	へ	ほ<br>75 KanaPoints</button>
+            <button id="ma" class="btn btn-primary d-none">ま	み	む	め	も<br>75 KanaPoints</button>
+            <button id="ya" class="btn btn-primary d-none">や	ゆ	よ<br>100 KanaPoints</button>
+            <button id="ra" class="btn btn-primary d-none">ら	り	る	れ	ろ<br>100 KanaPoints</button>
+            <button id="wa" class="btn btn-primary d-none">わ	を ん<br>100 KanaPoints</button>
           </div>
 
         </div>
-
       </div>
 
   </section>
@@ -93,45 +104,42 @@
 
 
 
-  <!-- <section class="container">
-    <h2 id="additionalresources">Additional Resources</h2>
-    <h5>What's Next?</h5>
-    <div class="col col-xs-12">
-      <p>After obtaining a grip on the fundementals of the Japanese language the next logical step would be putting them to use. There are an overwhelming number of opinions about what should come next. I will list the most noteworthy resources below and share my opinions about each.</p>
-      <a href="https://www.amazon.com/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">GENKI I: An Integrated Course in Elementary Japanese</a>
-      <p> - A very popular choice among universities in America.</p>
-    </p>
-    </div>
-  </section> -->
+
 
   <div class="pre-footer">
-    <a href="#">Back to Top</a>
+    <a href="#" alt="Back to Top"><div class="fa fa-arrow-up fa-2x" aria-hidden="true"></div></a>
   </div>
 
   <footer>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
-
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
-
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>sed do eiusmod Ut enim ad ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
+         <div class="col-xs-12 mx-auto">
+           <ul>
+             <li><a class="nav-link" href="index.html">Home</a></li>
+             <li><a class="nav-link" href="hiragana.html">Kana</a></li>
+             <li><a class="nav-link" href="vocab.html">Vocabulary</a></li>
+             <li><a class="nav-link" href="contact.html">Contact</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-xs-12 social-icons mx-auto">
+           <ul>
+             <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+             <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+             <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+             <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+           </ul>
+         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.5/howler.core.min.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/hiragana.js"></script>
 </body>
 </html>

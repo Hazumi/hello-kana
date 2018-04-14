@@ -1,41 +1,47 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">
   <title>Hello Kana - Master Kana Today</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Titillium+Web|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/lib/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
 
 <body>
-
   <header>
-    <div class="header-top">
-      <a class="logo" href="index.html">hello<span>kana</span></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="hiragana.html">kana</a></li>
-          <li><a href="vocab.html">vocabulary</a></li>
-          <li><a href="contact.html">contact</a></li>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <a class="logo navbar-brand" href="index.html">hello<span>kana</span></a>
+      <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse dropdown" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hiragana.html">Kana</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vocab.html">Vocabulary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
 
-    <div class="header-bottom">
+    <div class="container-fluid header-bottom">
       <h1>Master Kana</h1>
       <h4>A simple web app to practice Hiragana and Katakana</h4>
     </div>
-
-
-
-
   </header>
-
-
 
   <div class="nav-secondary">
     <ul>
@@ -45,83 +51,97 @@
     </ul>
   </div>
 
-  <ol class="breadcrumb">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#">Hiragana</a></li>
-    <li class="active">a i u e o</li>
-  </ol>
+  <!-- <nav id="breadcrum" aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+  </nav> -->
 
   <section class="container">
     <h2 id="writingsystem">Japanese Writing System</h2>
     <h5>The Language Components</h5>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <a href="hiragana.html"><p class="kana">あ</p></a>
-          <h3>Hiragana</h3>
-          <p>Hiragana is a set of written symbols that represent syllables spoken in Japanese. The word Hiragana itself means rounded because they were originally based on more intricate characters. Hiragana is typically the first syllabary set learned in Japanese.</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <a href="katakana.html"><p class="kana">ア</p></a>
-          <h3>Katakana</h3>
-          <p>Katakana is identical to Hiragana in pronunciation but it most commonly used for words of foreign origins. The characters themselves are simpler and more square. Katakana is the next step right after Hiragana.</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <a href="kanji.html"><p class="kana">水</p></a>
-          <h3>Kanji</h3>
-          <p>Kanji are ideograms used to represent ideas such as an objects, qualitys or things. There are 1,945 basic kanji that commonly used and about 3,000 used at a university level.</p>
-        </div>
+    <div class="row">
+      <div class="col-xs-12 col-md">
+        <a href="hiragana.html"><p class="kana">あ</p></a>
+        <h3>Hiragana</h3>
+        <p class="text-justify">Hiragana is a set of written symbols that represent syllables spoken in Japanese. The word Hiragana itself means rounded because they were originally based on more intricate characters. Hiragana is typically the first syllabary set learned in Japanese.</p>
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 text-center">
-          <button class="btn btn-block btn-default hvr-hang">Practice Hiragana</button>
-        </div>
-        <div class="col-xs-12 col-sm-4 text-center">
-          <button class="btn btn-block btn-default hvr-hang">Practice Katakana</button>
-        </div>
-        <div class="col-xs-12 col-sm-4 text-center">
-          <button class="btn btn-block btn-default hvr-hang">Practice Kanji</button>
-        </div>
+      <div class="col-xs-12 col-md">
+        <a href="katakana.html"><p class="kana">ア</p></a>
+        <h3>Katakana</h3>
+        <p class="text-justify">Katakana is identical to Hiragana in pronunciation but it most commonly used for words of foreign origins. The characters themselves are simpler and more square. Katakana is the next step right after Hiragana.</p>
       </div>
+      <div class="col-xs-12 col-md">
+        <a href="vocab.html"><p class="kana">水</p></a>
+        <h3>Vocabulary</h3>
+        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost</p>
+      </div>
+    </div>
+    <div class="row kana-btn-row">
+      <div class="col-xs-12 col-md pt-0">
+        <button class="btn btn-block btn-primary hvr-hang">Learn Hiragana</button>
+      </div>
+      <div class="col-xs-12 col-md pt-0">
+        <button class="btn btn-block btn-primary hvr-hang">Learn Katakana</button>
+      </div>
+      <div class="col-xs-12 col-md pt-0">
+        <button class="btn btn-block btn-primary hvr-hang">Coming Soon</button>
+      </div>
+    </div>
   </section>
 
-  <section class="container">
+  <section class="container-fluid">
     <h2 id="additionalresources">Additional Resources</h2>
     <h5>What's Next?</h5>
-    <div class="col col-xs-12">
-      <p>After obtaining a grip on the fundementals of the Japanese language the next logical step would be putting them to use. There are an overwhelming number of opinions about what should come next. I will list the most noteworthy resources below and share my opinions about each.</p>
-      <a href="https://www.amazon.com/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">GENKI I: An Integrated Course in Elementary Japanese</a>
-      <p> - A very popular choice among universities in America.</p>
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <p>After obtaining a grip on the fundementals of the Japanese language the next logical step would be putting them to use. There are an overwhelming number of opinions about what should come next. I will list the most noteworthy resources below and share my opinions about each.</p>
+            <a href="https://www.amazon.com/GENKI-Integrated-Elementary-Japanese-English/dp/4789014401">GENKI I: An Integrated Course in Elementary Japanese</a></li>
+            <p>Description: A very popular choice among universities in America.</p>
+            <p>Price: $$$</p>
+
+            <a href="http://www.yesjapan.com">Yes Japan</a>
+            <p>Description: A simple slightly slow straightforward approach.</p>
+            <p>Price: $$</p>
+
+      </div>
     </div>
   </section>
 
   <div class="pre-footer">
-    <a href="#">Back to Top</a>
+    <a href="#" alt="Back to Top"><div class="fa fa-arrow-up fa-2x" aria-hidden="true"></div></a>
   </div>
 
   <footer>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>Lorem ipsum amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
-
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
-
-        <div class="col col-xs-12 col-sm-4">
-          <h4>heading 4</h4>
-          <p>sed do eiusmod Ut enim ad ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.f</p>
-        </div>
+         <div class="col-xs-12 mx-auto">
+           <ul>
+             <li><a class="nav-link" href="index.html">Home</a></li>
+             <li><a class="nav-link" href="hiragana.html">Kana</a></li>
+             <li><a class="nav-link" href="vocab.html">Vocabulary</a></li>
+             <li><a class="nav-link" href="contact.html">Contact</a></li>
+           </ul>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-xs-12 social-icons mx-auto">
+           <ul>
+             <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+             <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+             <li><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+             <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+           </ul>
+         </div>
       </div>
     </div>
   </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

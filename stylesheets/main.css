@@ -1,8 +1,8 @@
 body {
   font-family: "Roboto", "Arial", sans-serif;
-  color: #444444;
+  color: #444;
   font-size: 16px;
-  background-color: #f9f9f9; }
+  background-color: #fcfcfc; }
   body a, body a:active, body a:hover, body a:visited {
     color: #5c4b9b;
     text-decoration: none; }
@@ -28,7 +28,7 @@ h3 {
   font-size: 1.17em;
   font-family: "Raleway", "Arial", sans-serif;
   text-align: center;
-  color: #444444; }
+  color: #444; }
 
 h4 {
   margin: 0 0 24px;
@@ -41,7 +41,7 @@ h5 {
   margin: 0 0 24px;
   font-family: "Varela Round", "Arial", sans-serif;
   font-size: 1em;
-  color: #aaaaaa;
+  color: #aaa;
   text-align: center; }
 
 p {
@@ -52,21 +52,15 @@ p {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  background: #52438b;
-  background: -moz-linear-gradient(left, #52438b 0%, #4b629b 100%);
-  background: -webkit-linear-gradient(left, #52438b 0%, #4b629b 100%);
-  background: linear-gradient(to right, #52438b 0%, #4b629b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52438b', endColorstr='#4b629b',GradientType=1 );
   margin: 0 auto 24px;
-  font-size: 400%;
-  color: #f9f9f9;
+  font-size: 325%;
+  color: #fcfcfc;
   text-indent: 0;
   text-align: center;
   background-color: #5c4b9b;
-  width: 115px;
-  height: 115px;
-  line-height: 115px;
-  box-shadow: 0px 0px 12px #7c6eaf; }
+  width: 100px;
+  height: 100px;
+  line-height: 100px; }
 
 .practice-kana {
   font-size: 7em;
@@ -75,6 +69,7 @@ p {
   color: #5c4b9b; }
 
 .logo {
+  font-family: "Varela Round", "Arial", sans-serif;
   font-size: 2em;
   font-weight: 200; }
   .logo span {
@@ -87,48 +82,52 @@ ul {
     display: inline-block;
     text-transform: capitalize; }
 
+#navbar-toggler {
+  border: 0 !important; }
+
 header {
-  background: #52438b;
-  background: -moz-linear-gradient(left, #52438b 0%, #4b629b 100%);
-  background: -webkit-linear-gradient(left, #52438b 0%, #4b629b 100%);
-  background: linear-gradient(to right, #52438b 0%, #4b629b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52438b', endColorstr='#4b629b',GradientType=1 );
-  padding: 18px;
+  background-color: #5c4b9b;
+  padding: 0 0 12px 0;
   font-family: "Varela Round", "Arial", sans-serif; }
   header a, header a:active, header a:hover, header a:visited {
-    color: #f9f9f9;
+    color: #fcfcfc;
     text-decoration: none; }
   header a:active, header a:hover {
     color: #fff; }
 
-.header-top {
-  display: flex;
-  justify-content: space-between; }
+a.nav-link {
+  letter-spacing: 0.5px;
+  border-radius: 5px; }
+
+button.navbar-toggler {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.075); }
+
+.collapsing a, .collapse.show a {
+  text-align: center; }
 
 nav {
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 1em;
-  float: right; }
+  font-size: 1em; }
   nav ul li {
-    padding: 0 0 0 24px; }
+    padding: 0 0 0 6px; }
 
 .nav-secondary {
-  margin: 0;
-  padding: 10px 0;
+  padding: 8px 0;
   background-color: #edecf3;
-  color: #444444;
+  color: #444;
   font-family: "Varela Round", "Arial", sans-serif;
   font-size: 0.9em;
-  border-bottom: #e1ddef 2px solid; }
+  border-bottom: #e1ddef 1px solid; }
 
 .nav-secondary ul {
-  padding: 0 0 0 24px; }
+  padding: 0 0 0 18px; }
   .nav-secondary ul li {
-    padding: 0 18px 0 0; }
+    padding: 3px 12px 3px 0; }
 
 .breadcrumb {
   margin: 0;
-  padding: 6px 0 6px 24px;
+  padding: 6px 0 6px 18px;
   background-color: #f6f5f9;
   border-bottom: #f0eef7 1px solid;
   font-size: 0.8em; }
@@ -139,7 +138,7 @@ nav {
     color: #978eb9; }
 
 section {
-  padding: 24px 0; }
+  padding: 36px 0; }
 
 .row {
   display: flex;
@@ -151,28 +150,34 @@ section {
     display: flex;
     flex-direction: column; }
 
-.btn {
-  margin: 2px;
-  color: #5c4b9b;
-  background-color: #f9f9f9;
-  border-top: 1px solid #7c6eaf;
-  border-left: 1px solid #7c6eaf;
-  border-bottom: 2px solid #5c4b9b;
-  border-right: 2px solid #5c4b9b;
-  border-radius: 0; }
-  .btn:focus {
+.kana-btn-row {
+  display: none; }
+
+.btn-primary {
+  margin: 0 auto;
+  font-family: "Raleway", "Arial", sans-serif;
+  letter-spacing: 1px;
+  color: #fcfcfc;
+  background-color: #5c4b9b;
+  border: 0;
+  border-radius: 16px;
+  transition: 0.4s all; }
+  .btn-primary:focus {
     outline: none; }
-  .btn:hover {
-    background-color: #f9f9f9;
-    border: 1px solid #7c6eaf;
-    color: #5c4b9b; }
+  .btn-primary:hover {
+    background-color: #7c6eaf;
+    cursor: pointer; }
+
+#progress-box .btn {
+  font-size: 0.8em; }
 
 .highlighted {
   color: green; }
 
 #alice {
-  position: relative;
-  width: 100%; }
+  display: none;
+  z-index: -1;
+  margin: 0 auto; }
 
 #results-box {
   text-align: center; }
@@ -207,7 +212,8 @@ section {
   font-family: "Varela Round", "Arial", sans-serif;
   text-align: center; }
   .stats p {
-    text-indent: 0; }
+    text-indent: 0;
+    margin-bottom: 0.75em; }
 
 .stats span {
   font-weight: bold; }
@@ -233,87 +239,46 @@ section {
 footer {
   padding: 24px;
   font-family: "Varela Round", "Arial", sans-serif;
-  font-size: 0.9em;
-  color: #e8e8e8;
+  font-size: 1em;
+  color: #efefef;
   background-color: #282828; }
 
-@media screen and (max-width: 600px) {
-  header {
-    flex-wrap: wrap; }
+.nav-secondary {
+  text-align: center; }
+  .nav-secondary li {
+    display: block; }
 
-  .header-top {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center; }
-
-  nav {
-    margin: 0 auto; }
-    nav ul {
+.social-icons ul {
+  padding: 0; }
+  .social-icons ul li {
+    padding: 0 0.5em 0 0;
+    color: #aaa;
+    font-size: 1.2em; }
+    .social-icons ul li:hover {
+      color: #efefef;
+      cursor: pointer; }
+    .social-icons ul li:last-of-type {
       padding: 0; }
-      nav ul li {
-        display: block;
-        padding: 0; }
 
-  h1 {
-    margin: 24px 0 12px 0;
-    font-size: 1.5em; }
+footer a, footer a:active, footer a:hover, footer a:visited {
+  color: #7c6eaf;
+  text-decoration: none; }
+footer a:active, footer a:hover {
+  color: #978eb9; }
 
-  .logo {
-    margin: 0 0 24px 0;
-    width: 100%; }
+@media screen and (min-width: 474px) {
+  .nav-secondary {
+    text-align: left; }
+    .nav-secondary li {
+      display: inline; }
 
-  nav {
+  #breadcrum {
     display: block; } }
-/* Hang */
-@-webkit-keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px); }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); } }
-@keyframes hvr-hang {
-  0% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); }
-  50% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px); }
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); } }
-@-webkit-keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); } }
-@keyframes hvr-hang-sink {
-  100% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px); } }
-.hvr-hang {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent; }
+@media (min-width: 768px) {
+  .kana-btn-row {
+    display: flex; }
 
-.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
-  -webkit-animation-name: hvr-hang-sink, hvr-hang;
-  animation-name: hvr-hang-sink, hvr-hang;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate; }
+  #alice {
+    display: block; } }
 
 /*# sourceMappingURL=main.css.map */

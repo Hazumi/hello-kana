@@ -302,7 +302,7 @@ $(document).ready(function() {
       xpToLvl: 15,
       xpBase: 15,
       exponent: 1.1,
-      kp: 0,
+      kp: 50,
       kana: 5,
       correct: 0,
       incorrect: 0,
@@ -448,7 +448,7 @@ $(document).ready(function() {
           $kp.text(user.kp);
           user.kana += numKanaAdded;
           if(btnArr[kanaUnlock + 1] !== undefined) {
-            btnArr[kanaUnlock + 1].removeClass('hidden');
+            btnArr[kanaUnlock + 1].removeClass('d-none');
             btnArr[kanaUnlock + 1].addClass('animated zoomIn');
           }
           kanaUnlock++;

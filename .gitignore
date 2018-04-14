@@ -2,3 +2,7 @@
 *.min.css
 stylesheets/main.min.css
 
+attribution.txt
+stylesheets/.sass-cache
+stylesheets/main.css
+stylesheets/main.css.map
