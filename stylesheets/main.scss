@@ -194,7 +194,7 @@ section {
   color: $white;
   background-color: $purple;
   border: 0;
-  border-radius: 16px;
+  @include border-radius(8px);
   transition: 0.4s all;
   &:focus {
     outline: none;
